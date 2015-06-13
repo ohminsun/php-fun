@@ -25,7 +25,7 @@ if ( empty($investment) ) {
 
 /* if an error message exists, go to the index page */
 if ($error_message != '') {
-    include('future_value_index.php');
+    include('future_value_index.html');
     exit();
 }
 

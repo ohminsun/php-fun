@@ -46,7 +46,23 @@
     $username = 'mgs_user';<br />
     $password = 'pa55word';<br />
 
-    $db = new PDO($dsn, $username, $password); /* creates PDO objecct */<br /><br /
+    $db = new PDO($dsn, $username, $password); /* creates PDO objecct */<br /><br />
+
+    $query = 'SELECT * FROM products<br />
+    WHERE categoryID = 1<br />
+    ORDER BY productID';<br />
+    $products = $db->query($query); /* $products contains the result set */<br /><br />
+
+    $category_id = 1;<br />
+    $code = 'strat';<br />
+    $name = 'Fender Stratocaster';<br />
+    $price = 699.99;<br />
+
+    $query = "INSERT INTO products<br />
+    		(categoryID, productCode, productName, listPrice)<br />
+    	VALUES<br />
+    		(category_ID, '$code', '$name', $price)";<br />
+    $insert_count = $db->exec($query);<br /><br />
     </p>                           
 </body>
 </html>

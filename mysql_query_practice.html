@@ -11,17 +11,36 @@
     ORDER BY listprice ASC<br /><br />
     
     FROM categories<br />
-    INNER JOIN products<br />
-    ON categories.categoryID = products.categoryID<br />
+    	INNER JOIN products<br />
+    	ON categories.categoryID = products.categoryID<br />
     INNER JOIN orderitems<br />
-    ON products.productID = orderitems.productID<br /><br />
+    	ON products.productID = orderitems.productID<br /><br />
     
     SELECT categoryName, productName, listPrice<br />
     FROM categories<br />
-    INNER JOIN products<br />
-    ON categories.categoryID = products.categoryID<br />
+    	INNER JOIN products<br />
+   	 	ON categories.categoryID = products.categoryID<br />
     WHERE listPrice > 800<br />
-    ORDER BY listPriceASC<br /><br />
+    ORDER BY listPriceASC<br />
+
+    INSERT INTO products<br />
+    	(categoryID, productCode, productName, listPrice)<br />
+    VALUES<br />
+    	(1, 'tele', 'Fender Telecaster', 599.00)<br />
+
+    UPDATE products<br />
+    SET productName = 'Ludwig 5-Piece Kit with Zildjian Cymbals'<br />
+    WHERE productCode = 'ludwig'<br />
+
+    UPDATE products<br />
+    SET listPrice = 299<br />
+    WHERE categoryID = 1<br />
+
+    DELETE FROM products<br />
+    WHERE productID = 1<br />
+
+    DELETE FROM products<br />
+    WHERE listPrice > 200<br /><br />
     </p>                           
 </body>
 </html>

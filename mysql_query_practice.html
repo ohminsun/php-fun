@@ -21,23 +21,23 @@
     	INNER JOIN products<br />
    	 	ON categories.categoryID = products.categoryID<br />
     WHERE listPrice > 800<br />
-    ORDER BY listPriceASC<br />
+    ORDER BY listPrice ASC<br /><br />
 
     INSERT INTO products<br />
     	(categoryID, productCode, productName, listPrice)<br />
     VALUES<br />
-    	(1, 'tele', 'Fender Telecaster', 599.00)<br />
+    	(1, 'tele', 'Fender Telecaster', 599.00)<br /><br />
 
     UPDATE products<br />
     SET productName = 'Ludwig 5-Piece Kit with Zildjian Cymbals'<br />
-    WHERE productCode = 'ludwig'<br />
+    WHERE productCode = 'ludwig'<br /><br />
 
     UPDATE products<br />
     SET listPrice = 299<br />
-    WHERE categoryID = 1<br />
+    WHERE categoryID = 1<br /><br />
 
     DELETE FROM products<br />
-    WHERE productID = 1<br />
+    WHERE productID = 1<br /><br />
 
     DELETE FROM products<br />
     WHERE listPrice > 200<br /><br />

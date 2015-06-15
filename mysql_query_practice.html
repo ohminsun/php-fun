@@ -63,6 +63,23 @@
     	VALUES<br />
     		($category_ID, '$code', '$name', $price)";<br />
     $insert_count = $db->exec($query);<br /><br />
-    </p>                           
+
+    $product_id = 4;<br />
+    $price = 599.99;<br />
+    $query = "UPDATE products<br />
+    	SET listPrice = $price<br />
+    	WHERE productID = $product_id";<br />
+    $update_count = $db->exec($query);<br /><br />
+
+    $product_id = 4;<br />
+    $query = "DELETE FROM products<br />
+    	WHERE productID = $product_id";<br />
+    	$delete_count = $db->exec($query);<br /><br />
+    </p>>
+    /* how to display the row counts */
+    <p>Insert count: <?php echo $insert_count; ?></p>
+    <p>Update count: <?php echo $update_count; ?></p>
+    <p>Delete count: <?php echo $delete_count; ?></p>
+                           
 </body>
 </html>

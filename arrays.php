@@ -24,3 +24,18 @@ foreach ($rates as $index=>$rate) {
 	$message .= $index . '='. $rate . ' | ';
 }
 
+/* getting data from the first row of a result set */
+$query = 'SELECT productCode, productName, listPrice
+	FROM products
+	WHERE productID = $productID';
+$products = $db->query($query);
+$product = $products->fetch();
+
+$product_code = $product['productCode'];
+$product_name = $product['productName'];
+$product_list_price = $product['listPrice'];
+
+$product_code = $product[0];
+$product_name = $product[1];
+$product_list_price = $product[2];
+

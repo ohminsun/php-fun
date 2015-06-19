@@ -39,3 +39,24 @@ $product_code = $product[0];
 $product_name = $product[1];
 $product_list_price = $product[2];
 
+/* getting data from all rows of a data set */
+$query = 'SELECT productCode, productName, listPrice
+	FROM products
+	WHERE categoryID = 1;'
+
+<?php foreach ($products as $product) { ?>
+<tr>
+	<td><?php echo $product['productCode']; ?></td>
+	<td><?php echo $product['productName']; ?></td>
+	<td><?php echo $product['listPrice']; ?></td>
+</tr>
+<?php } ?>
+
+<?php foreach ($products as $product) : ?>
+<tr>
+	<td><?php echo $product['productCode']; ?></td>
+	<td><?php echo $product['productName']; ?></td>
+	<td><?php echo $product['listPrice']; ?></td>
+</tr>
+<?php endforeach; ?>
+
